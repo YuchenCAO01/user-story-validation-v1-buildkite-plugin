@@ -1,0 +1,9 @@
+name: User Story Validator
+description: A user story validation plugin that assesses and vetts user story compliance in codebases
+author: https://github.com/YuchenCAO01
+requirements: []
+configuration:
+  mapping-file:
+    default: "user-stories.yml"
+    description: "Path to the user stories file"
+  additionalProperties: false

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -e
+set -x
+
+# Define working directory
+WORKDIR=$(dirname "$0")/../
+
+echo "precommnd start"
+
+# Check the environment and install dependencies if needed
+bash "$WORKDIR/scripts/shell/check-environment.sh"
+echo "env check finished"
+
+echo "check user sotry files"
+# Get the user stories file path from plugin configuration
+USER_STORIES_FILE=${BUILDKITE_PLUGIN_USER_STORY_VALIDATION_PLUGIN_MAPPING_FILE:-"user-stories.yml"}
+
+echo "checking user story templates"
+# Validate the user stories
+python "$WORKDIR/scripts/python/validate-user-stories.py" "./buildkite/$USER_STORIES_FILE"
