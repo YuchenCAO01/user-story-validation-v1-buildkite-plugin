@@ -1,6 +1,7 @@
 # User Story Validator Buildkite Plugin
 **Derived from James Sammut user story validation plugin**
-A plugin for Buildkite to validate user stories in your repository. It assesses and validates user story compliance in codebases.
+
+A plugin for Buildkite to validate user stories in your repository. It assesses and validates user story compliance in codebases. 
 
 ## Example
 
