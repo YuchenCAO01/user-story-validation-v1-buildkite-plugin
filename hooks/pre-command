@@ -1,12 +1,11 @@
 #!/bin/bash
 
-set -e
-set -x
+set -euo pipefail
 
 # Define working directory
-WORKDIR=$(dirname "$0")/../
+DIR="$(cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd)"
 
-echo "precommnd start"
+echo "pre-command start"
 
 # Check the environment and install dependencies if needed
 bash "$WORKDIR/scripts/shell/check-environment.sh"
@@ -19,3 +18,5 @@ USER_STORIES_FILE=${BUILDKITE_PLUGIN_USER_STORY_VALIDATION_PLUGIN_MAPPING_FILE:-
 echo "checking user story templates"
 # Validate the user stories
 python "$WORKDIR/scripts/python/validate-user-stories.py" "./buildkite/$USER_STORIES_FILE"
+
+
