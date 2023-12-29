@@ -7,3 +7,13 @@ configuration:
     userStoriesFile:
       type: string
   additionalProperties: false
+
+commands:
+  pre-command:
+    - label: "Validating User Stories Syntax"
+      plugins:
+        - docker#v3.8.0:
+            image: "python:3.9"
+            mount-buildkite-agent: false
+            workdir: /app
+            command: ["hooks/pre-command"]

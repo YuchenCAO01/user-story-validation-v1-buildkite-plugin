@@ -1,4 +1,6 @@
 #!/usr/bin/env bats
+load '../bats-support/load.bash'
+load '../bats-assert/load.bash'
 
 setup() {
     # 创建一个临时的测试环境
@@ -29,8 +31,10 @@ teardown() {
 }
 
 @test "Test pre-command hook with user-stories.yml" {
+
+
     # 模拟 pre-command 钩子的执行
-    run bash "$BATS_TEST_DIRNAME/../hooks/pre-command"
+    run "$PWD/hooks/pre-command"
 
     # 检查是否成功执行
     assert_success
