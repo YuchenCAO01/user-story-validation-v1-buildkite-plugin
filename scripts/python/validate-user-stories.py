@@ -4,6 +4,7 @@ import sys
 import yaml
 
 def validate_user_stories(file_path):
+    print("validating in python script")
     try:
         with open(file_path, 'r') as file:
             user_stories = yaml.safe_load(file)

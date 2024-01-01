@@ -2,15 +2,12 @@
 
 set -euo pipefail
 
-# Define working directory
-DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
 echo "pre-command start"
 
 # Check the environment and install dependencies if needed
 # Check if Python is installed
 if ! command -v python &> /dev/null; then
-    echo "Python is not installed. Installing Python..."
+    echo "Python is not installed. Please use a docker have python"
     # Add Python installation commands here (depends on the environment)
     
 
@@ -22,6 +19,4 @@ echo "check user story files"
 # Get the user stories file path from plugin configuration
 USER_STORIES_FILE=${BUILDKITE_PLUGIN_USER_STORY_VALIDATION_PLUGIN_MAPPING_FILE:-"user-stories.yml"}
 
-echo "checking user story templates"
-# Validate the user stories
-python "$DIR/scripts/python/validate-user-stories.py" "./buildkite/$USER_STORIES_FILE"
+
