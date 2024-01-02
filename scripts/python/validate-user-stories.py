@@ -23,5 +23,5 @@ if __name__ == "__main__":
     if len(sys.argv) != 2:
         print("Usage: validate-user-stories.py <path-to-user-stories-file>")
         sys.exit(1)
-
+    print("Path to user story file " + sys.argv[1])
     validate_user_stories(sys.argv[1])

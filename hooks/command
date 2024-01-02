@@ -10,4 +10,4 @@ echo "$DIR"
 
 echo "checking user story templates"
 
-python "$DIR/../scripts/python/validate-user-stories.py" "./buildkite/$USER_STORIES_FILE"
+python "$DIR/../scripts/python/validate-user-stories.py" "$USER_STORIES_FILE"
