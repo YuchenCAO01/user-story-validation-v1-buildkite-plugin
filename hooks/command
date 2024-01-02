@@ -2,9 +2,11 @@
 echo 'version 0.0.2'
 echo "executing the command hook"
 
-# DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-echo "${BASH_SOURCE[0]}"
+echo "$DIR"
+
+# echo "${BASH_SOURCE[0]}"
 
 echo "checking user story templates"
 
