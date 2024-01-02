@@ -1,4 +1,5 @@
 #!/bin/bash
+echo 'version 0.0.2'
 echo "executing the command hook"
 
 # DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -7,4 +8,4 @@ echo "${BASH_SOURCE[0]}"
 
 echo "checking user story templates"
 
-python "../scripts/python/validate-user-stories.py" "./buildkite/$USER_STORIES_FILE"
+python "$DIR/../scripts/python/validate-user-stories.py" "./buildkite/$USER_STORIES_FILE"

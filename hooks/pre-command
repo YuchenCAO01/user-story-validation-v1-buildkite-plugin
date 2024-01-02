@@ -1,7 +1,7 @@
 #!/bin/bash
 
 set -euo pipefail
-
+echo 'version 0.0.2'
 echo "pre-command start"
 
 # Check the environment and install dependencies if needed
