@@ -9,5 +9,5 @@ echo "$DIR"
 # echo "${BASH_SOURCE[0]}"
 
 echo "checking user story templates"
-
+USER_STORIES_FILE=${BUILDKITE_PLUGIN_USER_STORY_VALIDATION_PLUGIN_MAPPING_FILE:-"user-stories.yml"}
 python "$DIR/../scripts/python/validate-user-stories.py" "$USER_STORIES_FILE"
